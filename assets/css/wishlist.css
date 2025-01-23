@@ -1,0 +1,196 @@
+/* Standalone heart button (top-right corner) */
+.heart-btn:not(.btn-action) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.heart-btn:not(.btn-action) ion-icon {
+  font-size: 18px;
+  color: var(--sonic-silver);
+  transition: all 0.2s ease;
+}
+
+.heart-btn:not(.btn-action):hover {
+  background: var(--eerie-black);
+}
+
+.heart-btn:not(.btn-action):hover ion-icon {
+  color: var(--white);
+}
+
+.heart-btn:not(.btn-action).active {
+  background: var(--eerie-black);
+}
+
+.heart-btn:not(.btn-action).active ion-icon {
+  color: var(--white);
+}
+
+/* Heart button in showcase actions - matching other action buttons */
+.showcase-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.showcase-actions .btn-action.heart-btn {
+  background: var(--white);
+  border: none;
+  color: var(--sonic-silver);
+  width: 35px;
+  height: 35px;
+  border-radius: 3 px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-timing);
+  margin: 0; /* Remove margin */
+  order: -1; /* Move to the top */
+}
+
+.showcase-actions .btn-action.heart-btn ion-icon {
+  font-size: 20px;
+}
+
+.showcase-actions .btn-action.heart-btn:hover {
+  background: var(--eerie-black);
+  color: var(--white);
+}
+
+.showcase-actions .btn-action.heart-btn:hover ion-icon {
+  color: var(--white);
+}
+
+.showcase-actions .btn-action.heart-btn.active {
+  background: var(--eerie-black);
+  color: var(--white);
+}
+
+.showcase-actions .btn-action.heart-btn.active ion-icon {
+  color: var(--white);
+}
+
+/* Wishlist count */
+.wishlist-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--salmon-pink);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: var(--weight-500);
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 20px;
+}
+
+/* Add these styles to your existing wishlist.css */
+
+.wishlist-container {
+  padding: 40px 0;
+}
+
+.wishlist-title {
+  font-size: 24px;
+  font-weight: var(--weight-600);
+  margin-bottom: 30px;
+}
+
+.wishlist-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.wishlist-item {
+  position: relative;
+  background: var(--white);
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--white);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: var(--eerie-black);
+  color: var(--white);
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: 40px;
+  grid-column: 1 / -1;
+}
+
+.empty-wishlist p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--sonic-silver);
+}
+
+.btn-primary {
+  background: var(--salmon-pink);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--eerie-black);
+}
+/* Add this to your header navigation */
+.header-action-btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.header-action-btn ion-icon {
+  font-size: 24px;
+  color: var(--sonic-silver);
+}
+
+.header-action-btn .wishlist-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: var(--salmon-pink);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 20px;
+}
